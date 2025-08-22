@@ -1,1 +1,152 @@
-# DrunkenBuizel.github.io
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculadora credito </title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <link rel="icon" href="./imagen/bui.PNG"/>
+
+</head>
+
+
+<body class ="bg-dark">
+
+    <h1 class = "text-primary ps-3 pt-1"> Constant & Co. </h1>
+    <div class = "container rounded p-2">
+
+        <!-- Calculo hipotecario, display donde se colocan los datos -->
+        <div class ="card mx-3 mt-n5 shadow-lg" style = "border-radius: 10px; border-left: 8px #6a9ed4 solid;
+        border-right: none; border-top: none; border-bottom: none;">
+            <div class ="card-body">
+
+                <form class = "" action="" id="calculateForm" onsubmit="return calculateMortgage(event)" method="get" target="_self">
+                    
+                    <h1 class ="text-primary text-uppercase fs-1" > Calculo hipotecario </h1>
+
+                    <div class = "row h-50 ps-2 pe-2">
+
+                        <div class = "col g-3">
+                            <label for="fcuota" class = "form-label"> Cuota inicial </label>
+                            <input type="text" name="" class="form-control"  id="fcuota" placeholder="0">
+                        </div>
+
+                        <div class = "col g-3 ">
+                            <label for="fvalorInmueble" class = "form-label"> Valor total inmueble </label>
+                            <input type="text" name="" class="form-control" id="fvalorInmueble" placeholder="0"> 
+                        </div>
+                    </div>
+
+                    <div class = "row p-2">
+
+                        <div class = "col g-3 ">
+                            <label for="finteres"> Tasa interes </label>
+                            <input type="text" name="" id="finteres" class="form-control" placeholder="0">
+                        </div>
+
+                        <div class = "col g-3">
+                            <label for="fplazo"> Plazo en años </label>
+                            <input type="text" name="" id="fplazo" class="form-control" placeholder="0">
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Display de los botones, para no enviar formulario reset debe ser type button -->
+                    <div class = "col text-center mt-3">
+
+                        <button class = "btn btn-primary" style = "border-radius: 4px;" type = "submit"> Calcular </button>
+                        <button class = "btn btn-primary" style = "border-radius: 4px;" type = "button" onclick = "resetForm()"> Reset </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Display de los resultados de monto del prestamo y cuota mensual -->
+    <div class = "bg-secondary col  rounded container-md p-3 mt-5 fs-5">
+
+        <h1 class = "text-light text-uppercase fs-1"> Resultados </h1>
+            
+        <div class = "row ps-2 pe-2"> 
+            <label  class = "pb-1 text-warning" id = labelAux for="oMontoPrestamo"> Monto total del prestamo </label>
+            <output class = "rounded bg-light pt-2 pb-2 fs-5" id ="oMontoPrestamo"> 0 </output>
+        </div>
+
+        <div class = "row ps-2 pe-2"> 
+            <label  class = "pb-1 pt-2 text-warning" id = labelAux for="oCuota"> Valor cuota mensual </label>
+            <output class = "rounded bg-light pt-2 pb-2 fs-5" id="oCuota"> 0 </output>
+        </div>
+    </div>
+    
+    <br>
+
+    <!-- Acordeon simple, para formularios externos-->   
+    <div class="card mx-3 mt-n5 bg-dark p-5 border-0">
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        Revisa nuestras ofertas
+                    </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent=""> <!-- Ejemplo de autocerrado data-bs-parent="#accordionExample-->
+
+                    <div class="accordion-body">
+                        Aqui va la info del 1!
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="headingTwo">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Contáctanos
+                    </button> 
+
+                </h2>
+
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent=""> <!-- Remover data-bs-parent="#accordionExample" del div de la clase accordion-collapse se desabilita el autocerrar -->
+
+                    <div class="accordion-body">
+                            
+                        <button onclick="window.location.href='./pages/form.html'"> Formulario... </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- Div acordeon-->
+    </div> <!-- Div de card auxiliar sin bordes-->
+
+
+</body>
+
+<!-- Scripts se cargan al final, para evitar errores de lectura de datos -->
+
+<script src="./js/bootstrap.bundle.min.js"> </script>
+<script src="./js/calculadora.js"> </script>
+<script src="./js/form.js"> </script>
+<script> outputPlaceHolder() </script>
+
+</html># DrunkenBuizel.github.io
