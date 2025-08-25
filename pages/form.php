@@ -1,0 +1,105 @@
+
+<?php 
+
+    include "create.php";
+
+?>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulario </title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/globalStyle.css" />
+    <link rel="icon" href="../imagen/bui.PNG"/>
+
+</head>
+
+
+<body class = bg-dark>
+
+    <h1 class = "text-primary ps-3 pt-1"> Constant & Co. </h1>   
+
+    <div class ="card m-5 shadow-lg " style = "border-radius: 10px; border-left: 8px #6a9ed4 solid;
+        border-right: none; border-top: none; border-bottom: none;">
+        <div class = "card-body">
+            <h1 class = "text-primary"> Formulario </h1>
+
+            <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" name = "fcontact"  method = "post"> 
+                <div class = "row">
+
+                    <div class = "col">
+                        <label for="nombre"> Nombre </label>
+                        <input class="form-control" type="text" name="nombre" id = "nombre"  placeholder = "Ingrese nombre">
+                    </div>
+
+                    <div class = "col">
+                        <label for="apellido"> Apellido </label>
+                        <input class="form-control" type="text" name="apellido" id = "apellido"  placeholder = "Ingrese Apellido">
+                    </div>
+
+                </div>
+
+                <div class = "row mt-2">
+
+                    <div class ="col">
+                        <label for="telefono"> Número de teléfono </label>
+                        <input class="form-control" type="text" name="telefono" id="telefono"  placeholder="Ingrese su número telefónico">
+                    </div>
+
+                    <div class = "col">
+                        <label for="email"> Email </label>
+                        <input class="form-control" type="text" name="email" id="email"  placeholder="email@email.com">
+                    </div>
+
+                    <div class ="col">
+                        <label for="ciudad"> Ciudad </label>
+                        <input class="form-control" type="text" name="ciudad" id="ciudad" placeholder="Ingrese ciudad">
+                    </div>
+
+                    <div class = "col">
+                        <label for="pais"> País </label>
+                        <input class="form-control" type="text" name="pais" id="pais" placeholder="Ingrese pais de origen">
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class = "row">
+                    <div class = "col text-center">
+                        <button class = "btn btn-primary" id = "botonGuardar" type = "submit"> Guardar Datos </button>
+                    </div>
+
+                    <div class = "col text-center">
+                        <button class = "btn btn-primary rounded" onclick= "window.location.href='../index_new.html'" type = "button"> Volver... </button>
+                    </div>
+                </div>
+
+            </form>
+
+            <br>
+
+            <div class = "col" id = "tablaContacto">
+                <button class = "btn btn-primary rounded mb-3" onclick = "showContact()" > Mostrar Lista </button>           
+            </div> 
+    </div>   
+
+</body>
+
+
+
+<!---------------------- Scripts  ------------------->
+
+<script src="../js/form.js"> </script>
+
+<!---------------------- Scripts  ------------------->
+
+</html>

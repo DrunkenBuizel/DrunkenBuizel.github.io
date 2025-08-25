@@ -184,4 +184,5 @@ function resetForm(){
 
     document.forms["fcontact"].reset();
     persona.id = 0;
+    
 }
